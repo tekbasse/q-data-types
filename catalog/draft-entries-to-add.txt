@@ -16,6 +16,9 @@
 #q-data-types.date#
 #q-data-types.date_def#
 #q-data-types.date_hint#
+#q-data-types.date_ansi#
+#q-data-types.date_ansi_def#
+#q-data-types.date_ansi_hint#
 #q-data-types.decimal#
 #q-data-types.decimal_def#
 #q-data-types.decimal_hint#
