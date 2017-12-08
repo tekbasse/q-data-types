@@ -1,0 +1,23 @@
+decimal,text,,input,,,#q-data-types.decimal_hint#,
+natural_num
+text
+text_word think acronym, reference w/o spaces etc.
+alphanum_word
+acronym
+url
+email
+date
+currency
+boolean
+filename
+integer
+html_text
+time_of_day
+timestamp
+country
+country_code
+region
+region_code
+postal_code
+street_address
+phone_number
