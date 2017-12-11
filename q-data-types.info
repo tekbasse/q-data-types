@@ -16,7 +16,7 @@
         <description format="text/plain">Provides validation procs and formatting references for implementing a consistent UI.</description>
         <maturity>0</maturity>
 
-        <provides url="q-data-types" version="0.1d"/>
+        <provides url="q-data-types" version="11"/>
 
         <callbacks>
         </callbacks>
