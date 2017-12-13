@@ -28,9 +28,9 @@ CREATE TABLE qdt_data_types (
        -- A string displayed to hint at expected input format.
        input_hint varchar(100),
 
-       -- Name of procedure to validate info.
-       -- Validation does not necessarily consider empty case.
-       -- validation procedure name (referenced by tcl switch)
+       -- a proc that returns text in a particular format
+       -- For example, ec_pretty_price in ecommerce package
+       -- returns a decimal value with two decimals and a dollar sign.
        text_format_proc varchar(40),
 
        -- string for use with tcl format command
@@ -39,7 +39,21 @@ CREATE TABLE qdt_data_types (
        -- string for use with tcl clock format value -format string
        tcl_clock_format_str varchar(60),
 
+       -- Name of procedure to validate info.
+       -- Validation does not necessarily consider empty case.
+       -- validation procedure name (referenced by tcl switch)
        valida_proc varchar(40),
+
+       -- A proc that filters input in an attempt to fit
+       -- input to validate data without significantly altering input.
+       filter_proc varchar(40),
+
+       -- Default proc
+       -- If empty_allowed_p is false, and filter_proc returns empty string
+       -- Use this proc to create a default value
+       -- Note. An app could also use this proc to pre-fill 
+       -- a field with an expected or suggested value.
+       default_proc varchar(40),
 
        css_span varchar(120),
 
