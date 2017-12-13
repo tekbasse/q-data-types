@@ -42,6 +42,16 @@ CREATE TABLE qdt_data_types (
        -- Name of procedure to validate info.
        -- Validation does not necessarily consider empty case.
        -- validation procedure name (referenced by tcl switch)
+       -- What if the validation proc needs parameters?
+       -- For example, a range of integers?
+       -- In this case, supply the validation proc with parameters
+       -- in the manner that it would be called.
+       -- The reference will be parsed, and parameters passed
+       -- to the valida_proc.
+       -- For example: ad_page_contract_filter_proc_range x 90 "10 100"
+       -- * THis example is imaginary. ad_page_contract_filter_proc
+       -- is not intended to be used in this context, due to dependency on
+       -- ad_complain proc.
        valida_proc varchar(40),
 
        -- A proc that filters input in an attempt to fit
