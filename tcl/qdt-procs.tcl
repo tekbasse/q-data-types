@@ -10,12 +10,15 @@ ad_proc -public qdt_data_types {
 } {
     Returns data type records in an array q-data-type
     using reference fomat (label,qdt_data_types.fieldname).
-    For example: array_name(text,css_span).
+    For example: 
+    array_name(text,css_span) for label "text" attribute "css_span".
 
     If label_list is empty string, returns all entries in qdt_data_types.
-    If array_name not supplied, uses qdt_arr
+    If array_name not supplied, array_name is qdt_arr
 } {
     upvar $array_name d_arr
+    set qdt_ul [list ]
+
     if { $label_list ne "" } {
 
         # fieldnames
@@ -83,38 +86,37 @@ ad_proc -public qdt_data_types {
                 from qdt_data_types where label in (:labels) } ]
         }
 
-        foreach row qdt_ul {
-            set i 0
-
-##code
-            set f [lindex $row 0]
-            foreach f $f_ol {
-                incr i
-                
-                d_arr(${
-        }
-
     } else {
-
-            set qdt_ul [db_list_of_lists qdt_data_types_rall {
-                select label,
-                max_length,
-                form_tag_type,
-                empty_allowed_p,
-                input_hint,
-                text_format_proc,
-                tcl_format_str,
-                tcl_clock_format_str,
-                valida_roc,
-                filter_proc,
-                default_proc,
-                css_span,
-                css_div,
-                html_style,
-                abbrev_proc,
-                css_abbrev,
-                xml_format
-                from qdt_data_types } ]
+        
+        set qdt_ul [db_list_of_lists qdt_data_types_rall {
+            select label,
+            max_length,
+            form_tag_type,
+            empty_allowed_p,
+            input_hint,
+            text_format_proc,
+            tcl_format_str,
+            tcl_clock_format_str,
+            valida_roc,
+            filter_proc,
+            default_proc,
+            css_span,
+            css_div,
+            html_style,
+            abbrev_proc,
+            css_abbrev,
+            xml_format
+            from qdt_data_types } ]
 
     }
+    foreach row $qdt_ul {
+        set i 0
+        set f [lindex $row 0]
+        foreach fn $f_ol {
+            set d_arr(${f},${fn}) [lindex $row $i]
+            incr i
+        }
+    }
+    return 1
 }
+
