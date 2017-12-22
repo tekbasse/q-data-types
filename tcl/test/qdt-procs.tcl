@@ -29,7 +29,7 @@ aa_register_case -cats {api smoke} qdt_check {
                         for {set i 0} {$i < $p_len } { incr i} {
                             lappend partial_idx_list [randomRange $target_len]
                         }
-                        set partial_idx_list [lsort -unqiue -integer \
+                        set partial_idx_list [lsort -unique -integer \
                                                   $partial_idx_list]
                         set partial_list [list ]
                         foreach p $partial_idx_list {
@@ -46,7 +46,32 @@ aa_register_case -cats {api smoke} qdt_check {
                         }
                         aa_log "Testing add a custom local_data_types_lists\
  with t4_arr"
-                        ##code
+                        set c_list [split {text,text,,input,,1,"a hint qdt test",,,,hf_are_safe_and_visible_characters_q,,,,,,,,} ","]
+                        set custom1 [lreplace $c_list 0 0 custom1]
+                        qdt_data_types $partial_list t4_arr $custom1
+                        set nv_list [array get t4_arr "custom1,*"]
+                        set nv_data_ct [llength $nv_list]
+                        set nv_data_ct [expr { $nv_data_ct / 2 } ]
+                        aa_equals "t4_arr custom has same elements" \
+                            $nv_data_ct [llength $c_list]
+                        aa_log "Testing add custom1 local_data_types_lists\
+ with t8_arr"
+                        aa_log "custom1 nv_list: $nv_list"
+                        aa_log "c_list: $c_list"
+                        set custom2 [lreplace $c_list 0 0 custom2]
+                        qdt_data_types $partial_list t8_arr \
+                            [list $custom1 $custom2]
+                        set nv_list [array get t8_arr "custom1,*"]
+                        set nv_data_ct [llength $nv_list]
+                        set nv_data_ct [expr { $nv_data_ct / 2 } ]
+                        aa_equals "t8_arr custom1 has same elements" \
+                            $nv_data_ct [llength $c_list]
+                        set nv_list [array get t8_arr "custom2,*"]
+                        set nv_data_ct [llength $nv_list]
+                        set nv_data_ct [expr { $nv_data_ct / 2 } ]
+                        aa_equals "t8_arr custom2 has same elements" \
+                            $nv_data_ct [llength $c_list]
+
                         ns_log Notice "tcl/test/qdt-procs.tcl.429 test end"
                     } \
         -teardown_code {
