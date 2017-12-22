@@ -7,6 +7,7 @@ ad_library {
 ad_proc -public qdt_data_types {
     {label_list ""}
     {array_name "qdt_arr"}
+    {local_data_types_lists ""}
 } {
     Returns data type records in an array q-data-type
     using reference fomat (label,qdt_data_types.fieldname).
@@ -15,6 +16,12 @@ ad_proc -public qdt_data_types {
 
     If label_list is empty string, returns all entries in qdt_data_types.
     If array_name not supplied, array_name is qdt_arr
+
+    If qdt_data_types does not have a type for local use, new types
+    can be added via local_data_types_lists.
+    Use the same ordered list of values as supplied by query. 
+    See code for details.
+
 } {
     upvar $array_name d_arr
     set qdt_ul [list ]
@@ -108,6 +115,12 @@ ad_proc -public qdt_data_types {
             xml_format
             from qdt_data_types } ]
 
+    }
+    if { $local_data_types_lists ne "" } {
+        if { [lindex $local_data_types_lists 0] ne 1 } {
+            set qdt_ul [concat $qdt_ul $local_data_types_lists]
+        } else {
+            lappend qdt_ul $local_data_types_lists
     }
     foreach row $qdt_ul {
         set i 0
