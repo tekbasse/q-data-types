@@ -4,7 +4,9 @@ ad_library {
     @creation-date 16 Dec 2017
 }
 
-ad_proc -public qdt_data_types {
+namespace eval ::qdt {}
+
+ad_proc -public ::qdt::data_types {
     {label_list ""}
     {array_name "qdt_arr"}
     {local_data_types_lists ""}
