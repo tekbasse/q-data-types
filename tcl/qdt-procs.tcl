@@ -12,7 +12,7 @@ ad_proc -public ::qdt::data_types {
     {local_data_types_lists ""}
 } {
     Returns data type records in an array q-data-type
-    using reference fomat (label,qdt_data_types.fieldname).
+    using index reference fomat (label,qdt_data_types.fieldname).
     For example: 
     array_name(text,css_span) for label "text" attribute "css_span".
 
