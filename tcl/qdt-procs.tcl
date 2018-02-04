@@ -7,9 +7,9 @@ ad_library {
 namespace eval ::qdt {}
 
 ad_proc -public ::qdt::data_types {
-    {label_list ""}
-    {array_name "qdt_arr"}
-    {local_data_types_lists ""}
+    {-label_list ""}
+    {-array_name "qdt_arr"}
+    {-local_data_types_lists ""}
 } {
     Returns data type records in an array q-data-type
     using index reference fomat (label,qdt_data_types.fieldname).
@@ -133,13 +133,13 @@ ad_proc -public ::qdt::data_types {
         } else {
             lappend qdt_ul $local_data_types_lists
         }
-        foreach row $qdt_ul {
-            set i 0
-            set f [lindex $row 0]
-            foreach fn $f_ol {
-                set d_arr(${f},${fn}) [lindex $row $i]
-                incr i
-            }
+    }
+    foreach row $qdt_ul {
+        set i 0
+        set f [lindex $row 0]
+        foreach fn $f_ol {
+            set d_arr(${f},${fn}) [lindex $row $i]
+            incr i
         }
     }
     return 1

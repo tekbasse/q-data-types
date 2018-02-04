@@ -23,6 +23,13 @@ aa_register_case -cats {api smoke} qdt_check {
                         }
 
                         set target_len [llength $labels_list]
+                        if { $target_len > 0 } {
+                            set target_len_gt_0_p 1
+                        } else {
+                            set target_len_gt_0_p 0
+                        }
+                        aa_true "returns some data" $target_len_gt_0_p
+
                         set p_len [expr { $target_len / 2 } ]
 
                         set partial_idx_list [list]
@@ -36,7 +43,8 @@ aa_register_case -cats {api smoke} qdt_check {
                             lappend partial_list [lindex $labels_list $p]
                         }
                         aa_log "Testing partial dump with t1_arr"
-                        ::qdt::data_types $partial_list t1_arr 
+                        ::qdt::data_types -label_list $partial_list \
+                            -array_name t1_arr 
                         foreach p2 $partial_list {
                             array set t2_arr [array get qdt_arr "${p2},"]
                         }
@@ -48,7 +56,9 @@ aa_register_case -cats {api smoke} qdt_check {
  with t4_arr"
                         set c_list [split {text,text,,input,,1,"a hint qdt test",,,,hf_are_safe_and_visible_characters_q,,,,,,,,} ","]
                         set custom1 [lreplace $c_list 0 0 custom1]
-                        ::qdt::data_types $partial_list t4_arr $custom1
+                        ::qdt::data_types -label_list $partial_list \
+                            -array_name t4_arr \
+                            -local_data_types_lists $custom1
                         set nv_list [array get t4_arr "custom1,*"]
                         set nv_data_ct [llength $nv_list]
                         set nv_data_ct [expr { $nv_data_ct / 2 } ]
@@ -59,8 +69,9 @@ aa_register_case -cats {api smoke} qdt_check {
                         aa_log "custom1 nv_list: $nv_list"
                         aa_log "c_list: $c_list"
                         set custom2 [lreplace $c_list 0 0 custom2]
-                        ::qdt::data_types $partial_list t8_arr \
-                            [list $custom1 $custom2]
+                        ::qdt::data_types -label_list $partial_list \
+                            -array_name t8_arr \
+                            -local_data_types_lists [list $custom1 $custom2]
                         set nv_list [array get t8_arr "custom1,*"]
                         set nv_data_ct [llength $nv_list]
                         set nv_data_ct [expr { $nv_data_ct / 2 } ]
