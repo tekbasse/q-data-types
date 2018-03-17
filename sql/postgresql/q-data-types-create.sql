@@ -52,7 +52,7 @@ CREATE TABLE qdt_data_types (
        -- * THis example is imaginary. ad_page_contract_filter_proc
        -- is not intended to be used in this context, due to dependency on
        -- ad_complain proc.
-       valida_proc varchar(40),
+       valida_proc varchar(120),
 
        -- A proc that filters input in an attempt to fit
        -- input to validate data without significantly altering input.
