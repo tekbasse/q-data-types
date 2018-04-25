@@ -30,6 +30,8 @@ ad_proc -public ::qdt::data_types {
 
     # fieldnames
     # form_tag_attrs is expected to be a tcl name/value list
+    # so, there needs to be some post read processing
+    # to split values.
     set f_ol [list \
                   label \
                   tcl_type \
@@ -128,14 +130,18 @@ ad_proc -public ::qdt::data_types {
             from qdt_data_types } ]
 
     }
-    if { $local_data_types_lists ne "" } {
-        if { [lindex $local_data_types_lists 0] ne 1 } {
-            set qdt_ul [concat $qdt_ul $local_data_types_lists]
-        } else {
-            lappend qdt_ul $local_data_types_lists
-        }
-    }
+
+    # Before adding any custom datatypes, make form_tag_attrs a list.
+    set qdt2_ul [list ]
     foreach row $qdt_ul {
+        # index 4 is form_tag_attrs, which needs to be a true tcl list
+        lappend qdt2_ul [lreplace $qdt_ul 4 4 [split [lindex $qdt_ul 4] "\t"] ]
+    }
+    unset qdt_ul
+    if { $local_data_types_lists ne "" } {
+        set qdt2_ul [concat $qdt2_ul $local_data_types_lists]
+    }
+    foreach row $qdt2_ul {
         set i 0
         set f [lindex $row 0]
         foreach fn $f_ol {

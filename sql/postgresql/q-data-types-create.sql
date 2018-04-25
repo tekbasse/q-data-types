@@ -21,6 +21,8 @@ CREATE TABLE qdt_data_types (
        -- default attributes and their values to include with html tag.
        -- for example, if type is 'input', this might contain 'maxlength 10'
        -- for an input with maxlength of 10 characters.
+       -- The \t is used as a delimiter within the field
+       -- to split the value into a list in tcl.
        form_tag_attrs varchar(1000),
 
        empty_allowed_p boolean,
