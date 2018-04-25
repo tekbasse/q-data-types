@@ -46,6 +46,7 @@ CREATE TABLE qdt_data_types (
        -- For example, a range of integers?
        -- In this case, supply the validation proc with parameters
        -- in the manner that it would be called.
+       -- Use '{value}' to represent position of value to be checked.
        -- The reference will be parsed, and parameters passed
        -- to the valida_proc.
        -- For example: ad_page_contract_filter_proc_range x 90 "10 100"

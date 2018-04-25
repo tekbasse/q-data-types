@@ -29,6 +29,7 @@ ad_proc -public ::qdt::data_types {
     set qdt_ul [list ]
 
     # fieldnames
+    # form_tag_attrs is expected to be a tcl name/value list
     set f_ol [list \
                   label \
                   tcl_type \

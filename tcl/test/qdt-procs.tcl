@@ -16,6 +16,26 @@ aa_register_case -cats {api smoke} qdt_check {
                         aa_log "Testing full dump with default qdt_arr"
                         ::qdt::data_types
 
+                        #  0 label 
+                        #  1 tcl_type 
+                        #  2 max_length 
+                        #  3 form_tag_type 
+                        #  4 form_tag_attrs 
+                        #  5 empty_allowed_p 
+                        #  6 input_hint 
+                        #  7 text_format_proc 
+                        #  8 tcl_format_str 
+                        #  9 tcl_clock_format_str 
+                        # 10 valida_proc 
+                        # 11 filter_proc 
+                        # 12 default_proc 
+                        # 13 css_span 
+                        # 14 css_div 
+                        # 15 html_style 
+                        # 16 abbrev_proc 
+                        # 17 css_abbrev  
+                        # 18 xml_format
+
                         # build list of types
                         set labels_list [list ]
                         foreach {n v} [array get qdt_arr "*,label"] {
