@@ -36,6 +36,12 @@ aa_register_case -cats {api smoke} qdt_check {
                         # 17 css_abbrev  
                         # 18 xml_format
 
+                        aa_log "check parsing form_tag_attrs \
+ using datatype 'fileupload'"
+                        set form_tag_attrs $qdt_arr(fileupload,form_tag_attrs)
+                        aa_equals "index 0" [lindex $form_tag_attrs 0] "type"
+                        aa_equals "index 1" [lindex $form_tag_attrs 1] "file multiple"
+
                         # build list of types
                         set labels_list [list ]
                         foreach {n v} [array get qdt_arr "*,label"] {

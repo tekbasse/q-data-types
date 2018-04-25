@@ -135,7 +135,7 @@ ad_proc -public ::qdt::data_types {
     set qdt2_ul [list ]
     foreach row $qdt_ul {
         # index 4 is form_tag_attrs, which needs to be a true tcl list
-        lappend qdt2_ul [lreplace $qdt_ul 4 4 [split [lindex $qdt_ul 4] "\t"] ]
+        lappend qdt2_ul [lreplace $row 4 4 [split [lindex $row 4] "\t"] ]
     }
     unset qdt_ul
     if { $local_data_types_lists ne "" } {
