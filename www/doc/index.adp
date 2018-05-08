@@ -3,7 +3,7 @@
 <property name="context">@context;noquote@</property>
 <h2>Q-Data-Types</h2>
 <pre>
-The lastest version of the code is available at the site:
+The latest version of the code is available at the site:
  http://github.com/openacs-ecg2/q-data-types
 The development site: http://github.com/tekbasse/q-data-types
 </pre>
