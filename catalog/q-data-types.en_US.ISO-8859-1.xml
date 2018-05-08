@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <message_catalog package_key="q-data-types" locale="en_US" charset="ISO-8859-1">
   <msg key="alphanum_word">A word</msg>
-  <msg key="alphanum_word_hint">A collection of numerals and letters without spaces.</msg>
   <msg key="alphanum_word_def">A word consisting of alphanumeric characters.</msg>
+  <msg key="alphanum_word_hint">A collection of numerals and letters without spaces.</msg>
   <msg key="boolean">Boolean</msg>
   <msg key="boolean_def">A value representing True or False. Sometimes represented numerically as 1 or 0.</msg>
   <msg key="boolean_hint">True or false.</msg>
@@ -16,11 +16,11 @@
   <msg key="currency_def">Money or other items representing value and used to facilitate trade.</msg>
   <msg key="currency_hint">USD, GBP, EUR, CHF and the like</msg>
   <msg key="date">Date</msg>
-  <msg key="date_def">A day of a year in the Gregorian calendar. Year/Month/Day in numbers.</msg>
-  <msg key="date_hint">Year/Month/Day</msg>
   <msg key="date_ansi">YYYY-MM-DD</msg>
   <msg key="date_ansi_def">ISO 8601; A day of a year in the Gregorian calendar. </msg>
   <msg key="date_ansi_hint">Year-Month-Day in numbers, where Year is four digits and month and day in two digits each.</msg>
+  <msg key="date_def">A day of a year in the Gregorian calendar. Year/Month/Day in numbers.</msg>
+  <msg key="date_hint">Year/Month/Day</msg>
   <msg key="decimal">Decimal</msg>
   <msg key="decimal_def">A number expressed in the base-10 system, particularly a fractional numeral written in this system.</msg>
   <msg key="decimal_hint">A number like '123.45'</msg>
@@ -45,6 +45,12 @@
   <msg key="postal_code">Postal code</msg>
   <msg key="postal_code_def">A combination of letters and numbers that designate a particular region or location used to deliver mail via postal system.</msg>
   <msg key="postal_code_hint">Postcode, zipcode, like '89001-2082' in USA, or 'SW1A 2AA' in UK.</msg>
+  <msg key="range_integer">Integer</msg>
+  <msg key="range_integer_def">A number in a specified range that is not a fraction</msg>
+  <msg key="range_integer_hint">A number between two shown numbers, like '99' for a range of '1' to '100'</msg>
+  <msg key="range_integers">Range of Integers</msg>
+  <msg key="range_integers_def">The first and last elements in a sequence of numbers that are not fractions</msg>
+  <msg key="range_integers_hint">The first and last of a number sequence, like '1' and '4' for { 1, 2, 3, 4 }</msg>
   <msg key="region">Region</msg>
   <msg key="region_code">Region code</msg>
   <msg key="region_code_def">A combination of letters and numbers that designate a particular region.</msg>
