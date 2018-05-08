@@ -25,9 +25,14 @@ license
 </h3>
 <pre>
 Copyright (c) 2013 Benjamin Brink
-po box 20, Marylhurst, OR 97036-0020 usa
+po box 193, Marylhurst, OR 97036-0020 usa
 email: tekbasse@yahoo.com
 </pre>
+<p>
+Some definitions in the internationalization catalog directory are copied or derivatives of work licensed under
+Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) by wiktionary.org as a part of WikiMedia Project
+and distributed under the Creative Commons License https://creativecommons.org/licenses/by-sa/3.0/
+</p>
 <p>
 Q-Data-Types is open source and published under the GNU General Public License, consistent with the OpenACS system: http://www.gnu.org/licenses/gpl.html
 </p><p>
