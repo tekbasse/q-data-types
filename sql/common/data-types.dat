@@ -3,6 +3,7 @@ natural_num,integer,,input,type\tnumber\tmin\t0\tstep\t1,1,#q-data-types.natural
 range_integer,integer,,input,type\trange\tmin\t0\tmax\t100\tstep\t1,1,#q-data-types.range_integer_hint#,,,,qf_is_integer,,,,,,,,
 range_integers,list,,input,type\trange\tmin\t0\tmax\t100\tstep\t1,1,#q-data-types.range_integers_hint#,,,,hf_list_filter_by_natural_number,,,,,,,,
 text,text,,input,type\ttext,1,#q-data-types.text_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
+block_text,text,,textarea,,1,#q-data-types.text_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
 text_nonempty,text,,input,type\ttext,0,#q-data-types.text_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
 text_word,text,,input,type\ttext,1,#q-data-types.text_word_hint#,,,,hf_are_safe_and_printable_characters_q,,,,,,,,
 alphanum_word,text,,input,type\ttext,1,#q-data-types.alphanum_word_hint#,,,,hf_are_safe_and_printable_characters_q,,,,,,,,
