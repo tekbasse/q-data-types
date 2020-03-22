@@ -3,7 +3,7 @@ natural_num,integer,,input,type\tnumber\tmin\t0\tstep\t1,1,#q-data-types.natural
 range_integer,integer,,input,type\trange\tmin\t0\tmax\t100\tstep\t1,1,#q-data-types.range_integer_hint#,,,,qf_is_integer,,,,,,,,
 range_integers,list,,input,type\trange\tmin\t0\tmax\t100\tstep\t1,1,#q-data-types.range_integers_hint#,,,,hf_list_filter_by_natural_number,,,,,,,,
 text,text,,input,type\ttext,1,#q-data-types.text_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
-block_text,text,,textarea,,1,#q-data-types.text_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
+block_text,text,,textarea,,1,#q-data-types.text_hint#,,,,hf_are_safe_textarea_characters_q,,,,,,,,
 text_nonempty,text,,input,type\ttext,0,#q-data-types.text_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
 text_word,text,,input,type\ttext,1,#q-data-types.text_word_hint#,,,,hf_are_safe_and_printable_characters_q,,,,,,,,
 alphanum_word,text,,input,type\ttext,1,#q-data-types.alphanum_word_hint#,,,,hf_are_safe_and_printable_characters_q,,,,,,,,
@@ -15,7 +15,7 @@ currency,decimal,,input,type\tnumber\step\t.01\tmin\t0,1,#q-data-types.decimal_h
 boolean,boolean,,input,type\ttext,1,#q-data-types.boolean_hint#,,,,,,,,,,,,
 filename,text,,input,type\ttext,1,#q-data-types.filename_hint#,,,,ad_var_type_check_safefilename_p,,,,,,,,
 integer,integer,,input,type\tnumber,1,#q-data-types.integer_hint#,,,,qf_is_integer,,,,,,,,a
-html_text,text,,textarea,,1,#q-data-types.html_text_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
+html_text,text,,textarea,,1,#q-data-types.html_text_hint#,,,,hf_are_safe_textarea_characters_q,,,,,,,,
 time_of_day,text,,input,type\ttime,1,#q-data-types.time_of_day_hint#,,,,qf_clock_scan,,,,,,,,
 timestamp,text,,input,type\tdatetime-local,1,#q-data-types.timestamp_hint#,,,,qf_clock_scan,,,,,,,,
 country,text,,input,type\ttext,1,#q-data-types.country_hint#,,,,hf_are_safe_and_visible_characters_q,,,,,,,,
