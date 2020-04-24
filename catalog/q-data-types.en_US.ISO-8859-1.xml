@@ -3,6 +3,9 @@
   <msg key="alphanum_word">A word</msg>
   <msg key="alphanum_word_def">A word consisting of alphanumeric characters.</msg>
   <msg key="alphanum_word_hint">A collection of numerals and letters without spaces.</msg>
+  <msg key="attn">Attn</msg>
+  <msg key="attn_def">Name of party to receive delivery at address.</msg>
+  <msg key="attn_word_hint">Attention, the party to recieve delivery.</msg>
   <msg key="boolean">Boolean</msg>
   <msg key="boolean_def">A value representing True or False. Sometimes represented numerically as 1 or 0.</msg>
   <msg key="boolean_hint">True or false.</msg>
@@ -51,12 +54,12 @@
   <msg key="range_integers">Range of Integers</msg>
   <msg key="range_integers_def">The first and last elements in a sequence of numbers that are not fractions</msg>
   <msg key="range_integers_hint">The first and last of a number sequence, like '1' and '4' for { 1, 2, 3, 4 }</msg>
-  <msg key="region">Region</msg>
+  <msg key="region">City/Province</msg>
   <msg key="region_code">Region code</msg>
   <msg key="region_code_def">A combination of letters and numbers that designate a particular region.</msg>
   <msg key="region_code_hint">A code for a region, like 'PNW' for Pacific Northwest, or EU for European Union</msg>
-  <msg key="region_def">A subdivision of a city, territory, country or the European Union</msg>
-  <msg key="region_hint">An area with a name, like 'Four Corners' or 'Silicon Valley'</msg>
+  <msg key="region_def">A subdivision of a territory, a state in USA, a provice in some other countries like the European Union</msg>
+  <msg key="region_hint">A State or Province, or area larger than City and used by the local postal system.</msg>
   <msg key="street_address">Street address</msg>
   <msg key="street_address_def">The local address, usually includes a number for a part of a street, a street name, and sometimes more specific identifiers like room or suite reference.</msg>
   <msg key="street_address_hint">Local part of an address that includes street name. Like '123 Main st.'</msg>
