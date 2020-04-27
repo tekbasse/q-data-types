@@ -5,7 +5,7 @@
   <msg key="alphanum_word_hint">A collection of numerals and letters without spaces.</msg>
   <msg key="attn">Attn</msg>
   <msg key="attn_def">Name of party to receive delivery at address.</msg>
-  <msg key="attn_word_hint">Attention, the party to recieve delivery.</msg>
+  <msg key="attn_hint">Attention, the party to recieve delivery.</msg>
   <msg key="boolean">Boolean</msg>
   <msg key="boolean_def">A value representing True or False. Sometimes represented numerically as 1 or 0.</msg>
   <msg key="boolean_hint">True or false.</msg>
@@ -54,10 +54,10 @@
   <msg key="range_integers">Range of Integers</msg>
   <msg key="range_integers_def">The first and last elements in a sequence of numbers that are not fractions</msg>
   <msg key="range_integers_hint">The first and last of a number sequence, like '1' and '4' for { 1, 2, 3, 4 }</msg>
-  <msg key="region">City/Province</msg>
-  <msg key="region_code">Region code</msg>
-  <msg key="region_code_def">A combination of letters and numbers that designate a particular region.</msg>
-  <msg key="region_code_hint">A code for a region, like 'PNW' for Pacific Northwest, or EU for European Union</msg>
+  <msg key="region">State/Province</msg>
+  <msg key="region_code">State/Province code</msg>
+  <msg key="region_code_def">A combination of letters and numbers that designate a particular region, state or province.</msg>
+  <msg key="region_code_hint">A code for a region, state or province, like 'CA' for California, 'PNW' for Pacific Northwest, or PT for Pistoia in Tuscany</msg>
   <msg key="region_def">A subdivision of a territory, a state in USA, a provice in some other countries like the European Union</msg>
   <msg key="region_hint">A State or Province, or area larger than City and used by the local postal system.</msg>
   <msg key="street_address">Street address</msg>
