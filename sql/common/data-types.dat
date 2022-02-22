@@ -12,7 +12,7 @@ email,text,,input,type\temail,1,#q-data-types.email_hint#,,,,qf_email_valid_q,,,
 date,text,,input,type\tdate,1,#q-data-types.date_hint#,,,,qf_clock_scan,,,,,,,,
 date_ansi,text,,input,type\tdate,1,#q-data-types.date_ansi_hint#,,,,qf_clock_scan,,,,,,,,
 currency,decimal,,input,type\tnumber\step\t.01\tmin\t0,1,#q-data-types.decimal_hint#,,,,qf_is_decimal,,,,,,,,
-boolean,boolean,,input,type\ttext,1,#q-data-types.boolean_hint#,,,,,,,,,,,,
+boolean,boolean,,input,type\ttext,1,#q-data-types.boolean_hint#,,,,qf_is_boolean,,,,,,,,
 filename,text,,input,type\ttext,1,#q-data-types.filename_hint#,,,,ad_var_type_check_safefilename_p,,,,,,,,
 integer,integer,,input,type\tnumber,1,#q-data-types.integer_hint#,,,,qf_is_integer,,,,,,,,a
 html_text,text,,textarea,,1,#q-data-types.html_text_hint#,,,,hf_are_safe_textarea_characters_q,,,,,,,,
